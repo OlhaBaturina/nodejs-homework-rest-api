@@ -1,3 +1,9 @@
+
+const Subscription = {
+  STARTER: 'starter',
+  PRO: 'pro',
+  BUSINESS: 'business',
+
 const ValidInfoContact = {
   MIN_AGE: 1,
   MAX_AGE: 45,
@@ -7,6 +13,7 @@ const Gender = {
   MALE: "male",
   FEMALE: "female",
   NONE: "none",
+
 };
 
 const HttpCode = {
@@ -19,11 +26,8 @@ const HttpCode = {
   FORBIDDEN: 403,
   NOT_FOUND: 404,
   CONFLICT: 409,
+  TOO_MANY_REQUESTS: 429,
   INTERNAL_SERVER_ERROR: 500,
 };
 
-module.exports = {
-  ValidInfoContact,
-  Gender,
-  HttpCode,
-};
+module.exports = { Subscription, HttpCode };
