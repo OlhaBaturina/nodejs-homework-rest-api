@@ -7,11 +7,13 @@ require('dotenv').config();
 const SECRET_KEY = process.env.JWT_SECRET_KEY;
 const { HttpCode } = require('../config/constants');
 const mkdirp = require('mkdirp');
+
 const EmailService = require('../services/email/service');
 const {
   CreateSenderSendGrid,
   CreateSenderNodemailer,
 } = require('../services/email/sender');
+
 
 const {
   OK,
@@ -67,6 +69,7 @@ const registration = async (req, res, next) => {
         subscription: newUser.subscription,
         avatarURL: newUser.avatarURL,
         successEmail: statusEmail,
+
       },
     });
   } catch (error) {
@@ -190,4 +193,5 @@ module.exports = {
   uploadAvatar,
   verifyUser,
   repeatEmailForVerifyUser,
+
 };
