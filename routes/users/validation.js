@@ -1,7 +1,5 @@
-
 const Joi = require('joi');
 Joi.objectId = require('joi-objectid')(Joi);
-
 
 const schemaContact = Joi.object({
   isFavorite: Joi.boolean().optional(),
@@ -24,11 +22,9 @@ const validate = async (schema, obj, res, next) => {
     next();
   } catch (err) {
     res.status(400).json({
-
       status: 'error',
       code: 400,
       message: `Filed ${err.message.replace(/"/g, '')}`,
-
     });
   }
 };

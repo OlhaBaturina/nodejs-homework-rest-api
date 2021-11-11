@@ -1,19 +1,7 @@
-
 const Subscription = {
   STARTER: 'starter',
   PRO: 'pro',
   BUSINESS: 'business',
-
-const ValidInfoContact = {
-  MIN_AGE: 1,
-  MAX_AGE: 45,
-};
-
-const Gender = {
-  MALE: "male",
-  FEMALE: "female",
-  NONE: "none",
-
 };
 
 const HttpCode = {
